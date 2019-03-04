@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.baidu.mapapi.map.MapView>
+
+
+        <ImageView
+            android:id="@+id/img_location_point"
+            android:layout_width="12dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/map_pin" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="35dp"
+        android:background="#00000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+
+        <EditText
+            android:layout_gravity="center"
+            android:id="@+id/edit_query"
+            android:background="#cfffffff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="位置"
+            android:paddingLeft="10dp"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <FrameLayout
+            android:id="@+id/fl_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/actionbar_img_selector">
+
+            <ImageView
+                android:layout_width="@dimen/ActionBarHeight"
+                android:layout_height="@dimen/ActionBarHeight"
+                android:padding="12dp"
+                android:src="@drawable/search" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/listRelative"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#88888888">
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:id="@+id/sure"/>
+        <ListView
+            android:layout_below="@+id/sure"
+            android:id="@+id/lv_location_position"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/divideColor"
+            android:dividerHeight="1dp"
+            android:background="#fff">
+        </ListView>
+
+
+    </RelativeLayout>
+</RelativeLayout>
